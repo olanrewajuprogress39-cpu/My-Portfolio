@@ -17,7 +17,7 @@ html{
 body{
   background-color: var(--bg-color);
   color: var(--text-color);
-  
+  position: relative;
 }
 
 
@@ -94,17 +94,17 @@ header .logo span{
   display: block;
 }
 section{
-  min-height: 100vh;
   padding: 15rem 10%;
 }
+
 .home{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
-  background: linear-gradient( 120deg, var(--black), #1e3b8aa1);
-
+  gap: 2rem;background: linear-gradient( 120deg, var(--black), #1e3b8aa1);
+  height: 620px;
 }
+
 .home-content{
   display: flex;
   flex-direction: column;
@@ -381,15 +381,17 @@ section{
           font-size: 1.9rem;
         }
         
-       .portfolio { background: #111827; position: relative; }
+       .portfolio { background: #111827; position: relative;
+        }
         #project{position: relative;}
        .portfolio-grid {
          margin-top: 2rem;
-         display: grid;
-         grid-template-columns: repeat(auto-fit, 350px);
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
          align-items: center;
-         justify-content: space-around;
          gap: 14px;
+
        }
        .p-card {
          border-radius: 1rem;
@@ -405,63 +407,44 @@ section{
          overflow: hidden;
        }
 
+       
+
+
+
         /*  portfolio-img-showcase */
         
+       .project-container, .project-container-2{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.801);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        position: fixed;
+       }
+       .project-img, .project-img-2{
+         position: relative;
+       }
+       .cross, .cross2{
+         position: absolute;
+         cursor: pointer;
+         top: -18px;
+         right: -24px;
+         font-size: 2.8rem;
+       }
+       .project-img img, .project-img-2 img{
+         width: 400px;
+         border-radius: 1rem;
+       }
 
-        .project-img{
-          position: relative;
-          position: absolute;
-          position: fixed;
-          top: 20%;
-          left: 30%;
-          display: none;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0px 0px 10px var(--main-color);
-          border-radius: 10px;
-          z-index: 9999;
-          
-        }
-        .project-img-2{
-          position: relative;
-          position: absolute;
-          position: fixed;
-          top: 20%;
-          left: 30%;
-          display: none;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0px 0px 10px var(--main-color);
-          border-radius: 10px;
-          z-index: 9999;
-          
-        }
-        .project-img-2 h1{
-          cursor: pointer;
-          font-size: 2.7rem;
-          padding: .4rem 1rem;
-          border-radius: 50%;
-          top: -10px;
-          right: -10px;
-          background-color: var(--blue);
-          color: white;
-          position: absolute;
-        }
+         
 
-        .project-img h1{
-          cursor: pointer;
-          font-size: 2.7rem;
-          padding: .4rem 1rem;
-          border-radius: 50%;
-          top: -10px;
-          right: -10px;
-          background-color: var(--blue);
-          color: white;
-          position: absolute;
-        }
-        .project-img img{ width: 35vw;border-radius: 10px;}
-        .project-img-2 img{ width: 35vw;border-radius: 10px;}
-
+        
+ 
 
 
        /* Portfolio thumbnail gradients — each unique */
@@ -603,6 +586,8 @@ section{
   font-size: 14px;
 }
 
+ 
+
           /* RESPONSIVE */
 
   #menu-icon{
@@ -661,30 +646,38 @@ section{
     align-items: center;
     text-align: center;
   }
+  .home-content h1{
+    white-space: nowrap;
+  }
   .home-img img{
-    width: 55vw;
+    width: 65vw;
   }
   .about-img img{
-    width: 50vw;
+    width: 60vw;
   }
-  .project-img, .project-img-2{
-    position: relative;
-    position: absolute;
-    position: fixed;
-    top: 20%;
-    left: 20%;
-    display: none;
+  #project{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 10px var(--main-color);
-    border-radius: 10px;
-    z-index: 9999;
-    background-color: #000000;
   }
-  .project-img img{ width: 55vw;border-radius: 10px;}
-  .project-img-2 img{ width: 55vw;border-radius: 10px;}
+  
+   
+ 
+
+  .contact-form .form-row{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form{
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
 
 }
+
 
                /* contact section */
 
@@ -759,7 +752,7 @@ section{
     border-radius: 10px;
     padding: 13px 16px;
     color: white;
-    width: 37vw;
+    width: 100%;
     font-size: 1.42rem;
     transition: var(--transition);
     outline: none;
