@@ -632,7 +632,7 @@ section{
   .home{
     display: flex;
     flex-direction: column;
-    margin-top: 3rem;
+    padding-top: 3rem;
   }
   .about{
     display: flex;
