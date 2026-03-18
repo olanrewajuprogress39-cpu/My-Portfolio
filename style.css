@@ -619,6 +619,10 @@ section{
     align-items: center;
     display: none;
   } 
+  .project-img img, .project-img-2 img{
+    width: 200px;
+    border-radius: 1rem;
+  }
   .header .navbar a{
     font-family: 'Poppins', sans-serif;
     display: block;
