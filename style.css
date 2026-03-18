@@ -620,7 +620,7 @@ section{
     display: none;
   } 
   .project-img img, .project-img-2 img{
-    width: 200px;
+    width: 300px;
     border-radius: 1rem;
   }
   .header .navbar a{
