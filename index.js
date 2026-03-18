@@ -1,3 +1,16 @@
+function sendMail(){
+  let parms = {
+    name : document.getElementById("cname").value,
+    email : document.getElementById("cemail").value,
+    subject : document.getElementById("csubject").value,
+    message : document.getElementById("cmsg").value,
+  }
+
+  emailjs.send("service_jp4gq5l","template_mg97won", parms).then("Email Sent!!")
+}
+   
+
+
 
                  /*  menubar */
 
